@@ -17,7 +17,7 @@
 #### Webapp: React
 
 - `create-react-app` v2
-- Webpack
+- React Router DOM
 - Hot module reload
 
 #### Database: MySQL 5.7
