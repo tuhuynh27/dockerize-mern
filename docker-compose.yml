@@ -3,6 +3,8 @@ services:
   api:
     build:
       context: ./server
+    links:
+      - database:database
     expose:
       - 3000
     ports:
@@ -27,6 +29,7 @@ services:
     tty: true
   database:
     image: mysql:5.7
+    container_name: db-dev
     restart: always
     environment:
       MYSQL_DATABASE: "example_dbname"

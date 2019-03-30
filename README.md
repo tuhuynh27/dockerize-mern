@@ -10,6 +10,7 @@
 - Express server
 - Nodemon watcher
 - Morgan logger
+- Sequelize ORM with MySQL driver
 
 ### Webapp: React
 
