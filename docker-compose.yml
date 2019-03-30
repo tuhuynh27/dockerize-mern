@@ -25,3 +25,17 @@ services:
       - ./webapp/src:/root/src/app/src
       - ./webapp/public:/root/src/app/public
     tty: true
+  database:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: "example_dbname"
+      MYSQL_USER: "username"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
