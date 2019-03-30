@@ -1,0 +1,27 @@
+version: "3"
+services:
+  api:
+    build:
+      context: ./server
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    image: server-dev
+    container_name: server-dev
+    volumes:
+      - ./server/src:/root/src/api/src
+    tty: true
+  web:
+    build:
+      context: ./webapp
+    expose:
+      - 3001
+    ports:
+      - 3001:3001
+    image: web-dev
+    container_name: web-dev
+    volumes:
+      - ./webapp/src:/root/src/app/src
+      - ./webapp/public:/root/src/app/public
+    tty: true
