@@ -1,4 +1,4 @@
-## Dockerize development environment for MEARN stack
+## Dockerize development environment for MERN stack
 
 ### How to intall
 
